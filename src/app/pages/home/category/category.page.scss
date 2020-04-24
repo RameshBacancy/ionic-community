@@ -1,0 +1,12 @@
+ion-segment {
+    ion-segment-button {
+        --color-checked: white;
+        font-size: 10px;
+        ion-label {
+            margin-top: 5px;
+        }
+        ion-icon {
+            font-size: 15px;
+        }
+    }
+}

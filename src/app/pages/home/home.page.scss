@@ -1,0 +1,28 @@
+ion-header {
+    ion-toolbar {
+        --background: translucent;
+        background-color: #517a9f;
+        color: white;
+        align-items: center;
+    }
+}
+
+ion-toolbar {
+    --background: translucent;
+    background-color: #517a9f;
+}
+
+ion-content {
+    .home {
+        padding: 0vh 3vh 0vh 3vh;
+
+        .title {
+            height: 5vh;
+            line-height: 5vh;
+            font-size: 26px;
+            margin-bottom: 10px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+                "Helvetica Neue", sans-serif;
+        }
+    }
+}

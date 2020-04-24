@@ -1,0 +1,43 @@
+<ion-content>
+  <app-spinner *ngIf="showSpinner"></app-spinner>
+  <div class="story" *ngIf="!showSpinner">
+    <div class="storyImage">
+      <img src="{{ story.storyImage }}">
+      <ion-toolbar>
+        <ion-back-button defaultHref="/home" class="back"></ion-back-button>
+        <div class="icons">
+          <ion-icon name="heart-outline" class="like"></ion-icon>
+          <ion-icon name="share-social" (click)="shareStory()" class="share"></ion-icon>
+        </div>
+      </ion-toolbar>
+    </div>
+    <div class="detail">
+      <h4>{{ story.storyName }}</h4>
+      <div class="storyDetail">
+        <div class="like">
+          <ion-icon name="heart"></ion-icon>
+          <p>{{ story.likes }}</p>
+        </div>
+        <div class="view">
+          <ion-icon name="eye"></ion-icon>
+          <p>150</p>
+        </div>
+        <div class="date">
+          <ion-icon name="calendar-outline"></ion-icon>
+          <p>{{ story.timestamp * 1000 | date: 'dd/MM/yyyy' }}</p>
+        </div>
+      </div><br><br>
+      <div class="content">
+        <p>
+          {{ story.content }}
+        </p>
+        <p>
+          {{ story.content }}
+        </p>
+        <p>
+          {{ story.content }}
+        </p>
+      </div>
+    </div>
+  </div>
+</ion-content>

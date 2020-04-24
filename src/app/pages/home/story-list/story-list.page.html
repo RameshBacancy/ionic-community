@@ -1,0 +1,16 @@
+<div class="spinner" *ngIf="showSpinner">
+    <app-spinner></app-spinner>
+</div>
+<div class="story" *ngIf="!showSpinner">
+    <h4 class="title">Story</h4>
+    <ion-grid>
+        <ion-row *ngFor="let story of stories">
+            <ion-col size="12" (click)="navigateToStoryDetail(story)">
+                <div class="layer"></div>
+                <img src="{{ story.storyImage }}">
+                <h5>{{ story.storyName }}</h5>
+                <p>{{ story.content | slice:0:60 }}...</p>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</div>

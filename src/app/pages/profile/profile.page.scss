@@ -1,0 +1,53 @@
+.profile {
+    width: 100vw;
+    height: 40vh;
+    text-align: center;
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2);
+    .userDetails {
+        height: 22vh;
+        img {
+            margin-top: 6vh;
+            height: 10vh;
+            width: 10vh;
+            border-radius: 5vh;
+        }
+        h1 {
+            margin: 0px;
+            margin-top: 10px;
+            font-weight: bold;
+            color: rgb(63, 62, 62);
+            font-size: 20px;
+        }
+        p {
+            padding: 0px;
+            font-size: 18px;
+            color: gray;
+        }
+        .storyLikes {
+            height: 10vh;
+            .story, .likes {
+                width: 30%;
+                p {
+                    height: 4vh;
+                    padding: 0px;
+                    margin: 0px;
+                    line-height: 4vh;
+                    font-weight: 600;
+                }
+                h3 {
+                    margin: 0px;
+                    font-weight: bold;
+                }
+            }
+            .story {
+                margin-left: 20%;
+                float: left;
+            }
+            .likes {
+                float: right;
+                margin-right: 20%;
+            }
+        }
+    }
+}

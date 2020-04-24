@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add Your Story</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <app-spinner *ngIf="showSpinner"></app-spinner>
+  <div *ngIf="!showSpinner" class="addStory">
+    <form [formGroup]="addStoryForm" (ngSubmit)="addStory()">
+      <div class="form-group">
+        <label>Title</label>
+        <input type="text" class="form-control" formControlName="storyName" placeholder="Give your story a title">
+      </div>
+      <div class="form-group">
+        <label>Category</label>
+        <input type="text" (click)="categoryPickerSheet()" readonly class="form-control" formControlName="category">
+      </div>
+      <div class="form-group">
+        <label>Description</label>
+        <textarea formControlName="content" rows="4" class="form-control"
+          placeholder="Describe your story here"></textarea>
+      </div>
+      <label>Image</label>
+      <div class="selectImage" (click)="imagePickerSheet()">
+        <p *ngIf="selectedImage === ''">Tap me to select image</p>
+        <img *ngIf="selectedImage !== ''" src="{{ selectedImage }}">
+      </div>
+      <button class="submit" [disabled]="!addStoryForm.valid">Submit</button>
+    </form>
+  </div>
+</ion-content>
